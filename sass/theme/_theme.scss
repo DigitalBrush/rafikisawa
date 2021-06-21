@@ -1,0 +1,155 @@
+// This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+body {
+	font-family: $body-font;
+	line-height: 1.8; // hide page to prevent flash before animation
+	visibility: hidden;
+}
+h1 {
+	font-size: 48px;
+	font-weight: 700;
+	position: relative;
+	padding-bottom: $spacing-lg;
+	@include media-breakpoint-down(md) {
+		font-size: 32px;
+	}
+	@include media-breakpoint-down(sm) {
+		font-size: 32px;
+	}
+	&.section-title {
+		font-weight: 300;
+		text-align: center;
+		text-transform: uppercase;
+		padding: 0 0 $spacing-lg 0;
+	}
+	&.light-weight {
+		font-weight: 100;
+		font-size: 80px;
+		@include media-breakpoint-down(sm) {
+			font-size: 56px;
+		}
+	}
+	&:after {
+		position: absolute;
+		content: "";
+		width: 80px;
+		height: 5px;
+		bottom: 0;
+		left: 0;
+		background: $primary;
+	}
+}
+h2 {
+	font-size: 50.52px;
+	line-height: 76px;
+	position: relative;
+	margin-bottom: $spacing-lg;
+	font-weight: 700;
+	padding: 0 0 $spacing-lg 0;
+	@include media-breakpoint-down(xs) {
+		font-size: 24px;
+		line-height: 1.8em;
+	}
+	&:after {
+		position: absolute;
+		content: "";
+		width: 80px;
+		height: 5px;
+		bottom: 0;
+		left: 0;
+		background: $primary;
+	}
+}
+h3 {
+	font-size: 37.9px;
+	line-height: 1.5em;
+	font-weight: 700;
+	position: relative;
+	margin-bottom: $spacing-lg;
+	padding: 0 0 $spacing-sm 0;
+	@include media-breakpoint-down(xs) {
+		font-size: 18px;
+	}
+	&:after {
+		position: absolute;
+		content: "";
+		width: 80px;
+		height: 5px;
+		bottom: 0;
+		left: 0;
+		background: $primary;
+	}
+}
+h4 {
+	font-size: 22px;
+	font-weight: 700;
+	line-height: 1.8em;
+	position: relative;
+	padding-right: $spacing-lg;
+	@include media-breakpoint-down(xs) {
+		font-size: 18px;
+	}
+	&:after {
+		position: absolute;
+		content: "";
+		width: $spacing-md;
+		height: 3px;
+		top: $spacing-md; //right: 0;
+		margin-left: 16px;
+		background: $primary;
+	}
+}
+h6 {
+	font-size: 14px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	margin: $spacing-lg 0;
+	padding: 0;
+}
+.btn {
+	border-radius: 0;
+	font-weight: 600;
+	font-size: 16px;
+	text-transform: uppercase; //padding: 1rem;
+	padding: 12px 24px;
+	margin: $spacing 0;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	letter-spacing: 3px;
+	font-weight: 600;
+	line-height: 28px;
+	&.btn-primary {
+		color: $white !important;
+		&.no-dash {
+			&:before {
+				display: none;
+			}
+		}
+	}
+	&.btn-secondary {
+		color: $white !important;
+		background-color: $rafiki-dark;
+		border: 0;
+		position: relative;
+		padding: $spacing $spacing-md $spacing $spacing-max;
+		&:before {
+			position: absolute;
+			content: "";
+			width: 20px;
+			height: 2px;
+			left: $spacing-md;
+			background: $white;
+		}
+		&.no-dash {
+			&:before {
+				display: none;
+			}
+			padding-left: $spacing-md;
+		}
+	}
+	&.btn-tag {
+		background-color: $rafiki-border-color;
+		font-size: 14px;
+	}
+}
